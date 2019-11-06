@@ -1,12 +1,13 @@
 <!doctype html>
   <html lang="en">
   <head>
+      {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Album example · Bootstrap</title>
+    <title>Krishna Kadiyam</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
@@ -35,20 +36,20 @@
   <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Krishna Kadiyam</a>
+  <a class="navbar-brand" href="{% url 'home' %}">Krishna Kadiyam</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">LinkedIn</a>
+        <a class="nav-link" href="https://www.linkedin.com/in/krishna-kadiyam-6b8646b4/" target="_blank">LinkedIn</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Resume</a>
+        <a class="nav-link" href="{% static 'krishna_kadiyam_resume.pdf' %}" target="_blank">Resume</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Blog</a>
+        <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
       </li>
     </ul>
   </div>
@@ -61,9 +62,11 @@
     <div class="container">
       <h1 class="jumbotron-heading">Krishna Kadiyam</h1>
       <p class="lead text-muted">Hey, my name is Krishna. I love to create websites.
-          <br>This website is built using Django 2.2.6, Python 3.8 and Bootstrap 4.3.1<p>
+          <br>This website is built using Django 2.2.6, Python 3.8 and Bootstrap 4.3.1
+        <p>
         <a href="mailto:krishnatejakadiyam@gmail.com" class="btn btn-primary my-2">Email me</a>
       </p>
+        <img src="{% static 'picture.jpg' %}" height="300" />
     </div>
   </section>
 
